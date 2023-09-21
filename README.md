@@ -1,5 +1,5 @@
 # allc-scripts
 
-All scrips davi
+All scrips 
 
 shiba inu doggo, 
