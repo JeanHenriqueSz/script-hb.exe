@@ -1,5 +1,1 @@
-# allc-scripts
-
-All scrips 
-
-shiba inu doggo, 
+scripts de testes no digispark
